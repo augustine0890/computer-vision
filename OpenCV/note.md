@@ -20,3 +20,18 @@
 - Install Scikit-image
     - `pip install -U scikit-image`
     - Collection of algorithms for image processing
+
+## Loading, Displaying, and Saving
+- Basic information on the image: width, height, and 3 channels(RGB components of the image).
+- The Numpy array: (228, 350, 3). 228 pixels (number of rows) and 350 pixels (number of columns)
+- Every image consists of a set of pixels. Pixels are the raw building blocks of an image.
+- Most pixels are represented in two ways: grayscale and color.
+    - Grayscale: each pixel has a value between 0 and 255 (black: zero, white: 255)
+- Color pixels are represented in the RGB color space (Red-Green-Blue)
+    - Each of the three colors is represented by an integerin the range 0 to 255, which indicates how much of the color there is.
+    - Use an 8-bit unsigned integer to represent each color intensity.
+    - Combine these values into an RGB tuple in the form `(red, green, blue)` --> represents color.
+    - White color: (255, 255, 255), black color: (0, 0, 0)
+- The point (0, 0) corresponds to the upper left corner of the image.
+- Even though we specify pixels in terms of (x, y)-coordinates, when it comes to writing code, we access the individual pixel values as `image[y, x]`
+- OpenCV stores RGB channels in _reverse order_ (Blue, Green, Red).
