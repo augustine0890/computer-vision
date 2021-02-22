@@ -35,3 +35,6 @@
 - The point (0, 0) corresponds to the upper left corner of the image.
 - Even though we specify pixels in terms of (x, y)-coordinates, when it comes to writing code, we access the individual pixel values as `image[y, x]`
 - OpenCV stores RGB channels in _reverse order_ (Blue, Green, Red).
+
+## Drawing
+- Drawing operations allow us to draw Regions of Interest (ROIs) surrounding objects in an image.
