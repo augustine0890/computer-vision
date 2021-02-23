@@ -38,3 +38,9 @@
 
 ## Drawing
 - Drawing operations allow us to draw Regions of Interest (ROIs) surrounding objects in an image.
+
+## Image Processing
+- While RGB is easy to understand, it's unintuitive when defining exact shades of a color if you need to define a particular range of colors.
+- The `HSV` color space tends to be more intuitive terms of actually defining a particular color.
+- `L*a*b*` color space tries to mimic the methodology in which humans see and interpret color. This implies that the Euclidean distance between two arbitrary colors in the `L*a*b*` color space have actual perceptual meaning.
+- `HSV` to extract color histograms to quantify the contects of an image and even build an image search engine.
