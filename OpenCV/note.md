@@ -44,3 +44,7 @@
 - The `HSV` color space tends to be more intuitive terms of actually defining a particular color.
 - `L*a*b*` color space tries to mimic the methodology in which humans see and interpret color. This implies that the Euclidean distance between two arbitrary colors in the `L*a*b*` color space have actual perceptual meaning.
 - `HSV` to extract color histograms to quantify the contects of an image and even build an image search engine.
+
+## Histograms
+- A histogram represents the distribution of pixel intensities in an images.
+- The color histogram is arguably the simplest way to quantify the contents of an image
