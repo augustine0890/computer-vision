@@ -55,3 +55,10 @@
 - At each `(x, y)`-coordinate of the original image, we stop and examine the neighborhood of pixels located at the __center__ of the image kernel. We then take this neighborhood of pixels, convolve them with the kernel, and obtain a single output value. This output value is then stored in the output image at the same `(x, y)`-coordinates as the center of the kernel.
 - As the size of the blur kernel increases the image will appear to be more blurred.
 - A Gaussian blur is a weighted average of the local pixels and the average blur is not.
+
+## Thresholing
+- We use thresholding to focus on objects or areas of particular interest in an image.
+- Segmenting the foreground from the background of the image.
+- `cv2.threshold` function: a threshold value T must be manually supplied, making simple thresholding challenging in varying lighting conditions.
+- `Otsu`'s method assumes there are two peaks in the grayscale histogram of the image. One for the background, another for the foreground.
+- Adaptive thresholding allows us to handle cases where there may be dramatic ranges of pixel intensities and the optimal value of T may change for different parts of the image.
