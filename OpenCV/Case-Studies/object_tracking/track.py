@@ -1,4 +1,6 @@
-# US
+# USAGE
+# python3 track.py --video video/iphonecase.mov
+
 import numpy as np
 import argparse
 import time
