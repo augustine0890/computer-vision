@@ -67,3 +67,9 @@
 - Gradients are using for edge detection.
 - Compute the gradient magnitude representation of an image (Laplacian and Sobel) and detecting actual edges in an image (the Canny edge detector)
 - To obtain better edge maps, we often apply the blurring/smoothing pre-processing.
+
+## Contours
+- A contour is a curve of points, with no gaps in the curve.
+- Contours allow us to count objects in images and allow us to extract these objects from images.
+- The `cv2.findContours` function is usually applied in binary color space.
+- We can visualize the contours with `cv2.drawContours` function.
