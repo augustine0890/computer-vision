@@ -62,3 +62,8 @@
 - `cv2.threshold` function: a threshold value T must be manually supplied, making simple thresholding challenging in varying lighting conditions.
 - `Otsu`'s method assumes there are two peaks in the grayscale histogram of the image. One for the background, another for the foreground.
 - Adaptive thresholding allows us to handle cases where there may be dramatic ranges of pixel intensities and the optimal value of T may change for different parts of the image.
+
+## Gradients and Edge Detection
+- Gradients are using for edge detection.
+- Compute the gradient magnitude representation of an image (Laplacian and Sobel) and detecting actual edges in an image (the Canny edge detector)
+- To obtain better edge maps, we often apply the blurring/smoothing pre-processing.
