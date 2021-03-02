@@ -12,3 +12,5 @@ venv/
 *
 # Unignore all with extensions
 !*.*
+
+.vscode

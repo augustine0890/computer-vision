@@ -33,3 +33,51 @@ int main() {
     - `g++ main.cpp -o main`
 - To invokethe compiled the program:
     - `./main`
+
+### C++ pipeline
+- Preprocessor: resolves any preprocessor statements, editing origin code.
+- Complilation: creates object files that contain machine code from our source files.
+- Linker: Links object files together to create the final executable.
+
+### Preprocessor Directives
+#### Include
+- `#include` means `copy here`. It will copy and paste the contents of the included file in its place. Any functions, variables, classes, and so on defined in that header are now also accessible by the class containing the `include` directive.
+```cpp
+// Include example.
+// Version 1 - Generally for system files.
+#include <headerfile>
+
+// Version 2 - Generally for programmer files.
+#include "headerfile"
+```
+- Version 1: The preprocessor to look for the file using pre-defined search paths. This is typically used for system headers, and these paths might be set by your IDE.
+- Version 2: The preprocessor to start its search locally where the file itself sits. This is generally used to include your own project headers.
+
+#### Macros
+- The `#define/#undef` directives allow us to define macros in our programs.
+```cpp
+#define name content
+// Defining functionality
+#include <iostream>
+#define MULTIPLY(a, b) (a * b)
+
+int main() {
+    std::cout << MULTIPLY(3, 4);
+}
+```
+#### Conditional Compilation
+- The `#ifdef/#endif` directives to help us guard against this by letting us check whether a given values is currently defined.
+
+### Basic I/O Statements
+- I/O stands for __input/output__.
+- The `iostream` header contains everything we need to interface with our applications via the keyboard.
+- Use `std::cin` to read data from keyboard.
+
+### Functions
+- Functions encapsulate our code into logical units of functionality
+- A function is declared as follows:
+```cpp
+return_type function_name(parameters);
+```
+- The declaration usually lives in a header file `(.h)` along with other functions declarations, and they are the defined in a `.cpp` file. (`#include` directive so often)
+- We declaration our objects'functionality in header files, then actually define how they work in `.cpp` files.
