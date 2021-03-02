@@ -8,9 +8,5 @@ venv/
 # for mac
 *.DS_Store*
 
-# Ignore all
-*
-# Unignore all with extensions
-!*.*
 
 .vscode
