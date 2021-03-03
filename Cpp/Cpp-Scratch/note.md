@@ -83,3 +83,55 @@ return_type function_name(parameters);
 - We declaration our objects'functionality in header files, then actually define how they work in `.cpp` files.
 
 ## Control Flow
+- Link [here](https://github.com/augustine0890/computer-vision/tree/master/Cpp/Cpp-Scratch/control-flow)
+
+## Built-In Data Types
+- A class is a collection of variables and functionality, encapsulated neatly within a single object.
+    ```cpp
+    class MyClass
+    {
+    public:
+        // Any members declared from this point forth will be public.
+    protected:
+        // Any members declared from this point forth will be protected.
+    private:
+        // Any members declared from this point forth will be private.
+    };
+    ```
+- `Structs` are very similar to classes. The difference between the two is that, by default, class members are private, and in a struct, they are public.
+    ```cpp
+    #include <iostream>
+    #include <string>
+
+    struct Coordinate {
+        float x = 0;
+        float y = 0;
+    };
+
+    int main() {
+        Coordinate myCoordinate;
+        myCoordinate.x = 1;
+        myCoordinate.y = 2;
+        std::cout << "Coordinate: " << myCoordinate.x << ", " << myCoordinate.y;
+    }
+    ```
+- Static is a special keyword in C++. The static variables are only inititalized once during the application, and therefore maintain their value throughout.
+- Both variables and functions can be made static
+    ```cpp
+    #include <iostream>
+    #include <string>
+
+    int MyInt()
+    {
+        static int myInt = 0;
+        return ++myInt;
+    }
+
+    int main()
+    {
+        for (int i = 0; i < 5; ++i)
+        {
+            std::cout << MyInt();
+        }
+    }
+    ```
