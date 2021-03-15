@@ -4,6 +4,10 @@
 - Create virtual environment
     - `python3 -m venv .env`
     - `source .env/bin/activate`
+- Install `ipykernel` using `pip`
+    - `pip install ipykernel`
+    - `ipython kernel install --user --name=.env`
+    - Stop: `jupyter-notebook stop`
 - Install OpenCV
     - `pip install opencv-python`
     - __DO NOT__ install both `opencv-python` and `opencv-contrib-python`. Pick __ONE__ of them.
