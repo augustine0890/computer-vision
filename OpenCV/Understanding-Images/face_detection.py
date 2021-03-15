@@ -2,11 +2,15 @@ import numpy as np
 import cv2
 
 
-harr = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+haar = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
 def face_dectect(img):
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
-    faces = harr.detectMultiScale(gray, 1.3, 5)
+    faces = haar.detectMultiScale(gray,
+        scaleFactor=1.3,
+        minNeighbors=5,
+        minSize=(30,30)
+    )
 
     for x, y, w, h in faces:
         cv2.rectangle(img, (x,y), (x+w, y+h), (0,255,255), 2)

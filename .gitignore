@@ -10,3 +10,7 @@ venv/
 
 
 .vscode
+
+# images data
+*/*/*/data/
+*.png
