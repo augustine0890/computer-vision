@@ -2,8 +2,8 @@ from glob import glob
 import numpy as np
 import cv2
 
-female_path = glob('./data/female/*.png')
-male_path = glob('./data/male/*.png')
+female_path = glob('../data/female/*.png')
+male_path = glob('../data/male/*.png')
 # print(len(female_path))
 # print(len(male_path))
 
@@ -49,9 +49,9 @@ def extract_image(path, gender, index):
     for (x, y, w, h) in faces:
         roi = img[y:y+h, x:x+h]
         if gender == 'female':
-            cv2.imwrite('./data/faces/female/{}.png'.format(index), roi)
+            cv2.imwrite('../data/faces/female/{}.png'.format(index), roi)
         else:
-            cv2.imwrite('./data/faces/male/{}.png'.format(index), roi)
+            cv2.imwrite('../data/faces/male/{}.png'.format(index), roi)
 
 for i, path in enumerate(female_path):
     extract_image(path, 'female', i)
