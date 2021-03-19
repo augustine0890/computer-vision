@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block bodyblock %}
+<div class="container">
+    <br>
+    <h2 class="content"><span style="color: #1261A0">FaceID</span> Facical Recognition</h2>
+    <br>
+    <p class="lead">Facial recognition apps can identify faces by analyzing video frames, close-ups, or distance photos. The program identifies certain points, or nodes, of a person’s face.
+        The nodes, along with skin surface analysis and 3D face mapping, are used to determine a face’s features.</p>
+    
+    <img src="{{ url_for('static', filename='images/app_pipeline.png')}}" alt="faceid" width="900" height="300">
+    <br>
+    
+</div>
+
+{% endblock %}
