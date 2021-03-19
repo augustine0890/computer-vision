@@ -31,3 +31,21 @@ body, html {
   font-weight: bold;
   font-size: 25px;
 }
+
+.form-inline {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+}
+
+.form-inline label {
+  margin: 5px 10px 5px 0;
+}
+
+#predict {
+  display: block;
+  left: 10px;
+  border: solid;
+  color:rgba(138, 151, 224, 0.582);
+  text-align: center;
+}

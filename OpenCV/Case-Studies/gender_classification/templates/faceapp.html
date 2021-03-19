@@ -10,7 +10,31 @@
     
     <img src="{{ url_for('static', filename='images/app_pipeline.png')}}" alt="faceid" width="900" height="300">
     <br>
-    
+
+    <div class="container">
+        <br>
+        <form class="form-inline" action="#" method="POST" enctype="multipart/form-data">
+            <label for="upload">Upload Photo</label>
+            <input class="custom-file-input" type="file" id="upload" name="image" required="true">
+            <input class="btn btn-primary" type="submit" value="Get the result">
+        </form>
+    </div>
+
+    <br>
+    {% if fileupload %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" id="predict">
+                <img src="{{ url_for('static', filename='uploads/')}}{{ img_name }}" alt="fitpet" width="{{ w }}" height="350">
+            </div>
+
+            <div class="col-md-6" id="predict">
+                <img src="{{ url_for('static', filename='results/')}}{{ img_name }}" alt="fitpet" width="{{ w }}" height="350">
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
 </div>
 
 {% endblock %}
