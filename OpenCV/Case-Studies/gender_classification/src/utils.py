@@ -64,4 +64,10 @@ def pipeline_model(path, filename, color='BGR'):
 
 def cleanfile(path, filename):
     paths = glob(os.path.join(path, 'static/results/*'))
-    result = [os.remove(file) for file in paths if os.stat(file).st_mtime < time() - 120] # seconds
+    for file in paths:
+        if os.stat(file).st_mtime < time() - 120:
+            try:
+                os.remove(file)
+            except OSError as e:
+                print("Error: %s : %s" % (file, e.strerror))
+    # result = [os.remove(file) for file in paths if os.stat(file).st_mtime < time() - 120] # seconds
