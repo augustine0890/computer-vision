@@ -14,3 +14,7 @@ venv/
 # images data
 */*/*/data/
 *.png
+
+# microbiome data
+*/raw_data/
+*.gz
