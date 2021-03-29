@@ -9,12 +9,14 @@ import cv2
     averages of particular image region.
 - The known color that minimizes the Euclidean distance will be chosen as the color identification.
 """
-class ColorLabler:
+class ColorLabeler:
     def __init__(self):
         colors = OrderedDict({
             "red": (255, 0, 0),
+            "orange": (255, 140, 0),
             "green": (0, 255, 0),
-            "blue": (0, 0, 255)
+            "blue": (0, 0, 255),
+            "yellow": (255, 255, 0)
         })
 
         # allocate memory for the L*a*b* image, then initialize the colore names list
@@ -31,3 +33,23 @@ class ColorLabler:
 
     def label(self, image, c):
         # construct a mask for the contour, the compute the average L*a*b value for masked region
+        mask = np.zeros(image.shape[:2], dtype="uint8")
+        cv2.drawContours(mask, [c], -1, 255, -1)
+        mask = cv2.erode(mask, None, iterations=2)
+        mean = cv2.mean(image, mask=mask)[:3]
+
+        # initialize the minimum distance
+        minDist = (np.inf, None)
+
+        # loop over the known L*a*b color values
+        for (i, row) in enumerate(self.lab):
+            # compute the distance between the current L*a*b
+            # color value and the mean of the image
+            d = dist.euclidean(row[0], mean)
+
+            # if the distance is smaller then the current distance then update the bookkeeping variable
+            if d < minDist[0]:
+                minDist = (d, i)
+
+        # return the name of the color with the smallest distance
+        return self.colorNames[minDist[1]]
