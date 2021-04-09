@@ -18,3 +18,12 @@ venv/
 # microbiome data
 */raw_data/
 *.gz
+
+# OpenCV JS
+opencv.js
+# OpencCV source code
+opencv
+# Emscripten
+emsdk
+# Builed js
+build_js
