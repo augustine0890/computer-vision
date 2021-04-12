@@ -1,0 +1,11 @@
+total 56
+drwxr-xr-x  10 augustine  staff  320 Apr 12 16:46 .
+drwxr-xr-x   3 augustine  staff   96 Apr 12 15:47 ..
+-rw-r--r--   1 augustine  staff  358 Apr 12 16:41 buffio.go
+-rw-r--r--   1 augustine  staff  716 Apr 12 16:16 dinnertotal.go
+-rw-r--r--   1 augustine  staff   91 Apr 12 15:07 dosomething.go
+-rw-r--r--   1 augustine  staff  383 Apr 12 16:23 flag.go
+-rw-r--r--   1 augustine  staff  270 Apr 12 16:36 scan.go
+-rw-r--r--   1 augustine  staff  310 Apr 12 16:46 scanfile.go
+-rw-r--r--   1 augustine  staff  395 Apr 12 14:51 showmestuff.go
+-rw-r--r--   1 augustine  staff    0 Apr 12 16:46 test.text
