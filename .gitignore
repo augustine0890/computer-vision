@@ -27,3 +27,6 @@ opencv
 emsdk
 # Builed js
 build_js
+
+# training data analyst
+training-data-analyst
