@@ -27,6 +27,8 @@ opencv
 emsdk
 # Builed js
 build_js
+# Node modules
+node_modules
 
 # training data analyst
 training-data-analyst
